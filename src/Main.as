@@ -32,6 +32,7 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			// entry point
 			var clazz:ClazzUseDelay = new ClazzUseDelay();
+			addChild(clazz);
 			//var pro:GenericMetadataProcessor = new GenericMetadataProcessor(clazz, "delayFun", ApplicationDomain.currentDomain);
 			
 			var reg:AS3ReflectMetadataProcessorRegistry = new AS3ReflectMetadataProcessorRegistry();
@@ -42,7 +43,7 @@ package
 			pro.process(delay, "Theme");
 			//reg.addProcessor(pro);
 			reg.process(clazz);
-			trace(reg.getProcessorsForMetadata("Theme"));
+			
 			
 			//var delay:Delay = new Delay(reg, ApplicationDomain.currentDomain);
 			//delay.process(clazz, "tt");
